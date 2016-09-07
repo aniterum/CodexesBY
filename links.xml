@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<links URL="https://github.com/aniterum/CodexesBY/raw/laws_zlib/laws_zlib/">
+<links URL="https://github.com/aniterum/CodexesBY/raw/master/laws_zlib/">
   <codex hash="c575779ef3809cad1a2092c92ee551a007452d4e" name="civil_proc.xml.zlib" packed="166458" size="1073401" title="Гражданский Процессуальный Кодекс Республики Беларусь"/>
   <codex hash="5009ab123a8c3011f02818041bd5f66e278c3cc6" name="bank.xml.zlib" packed="98388" size="703287" title="Банковский Кодекс Республики Беларусь"/>
   <codex hash="240c82d36afe80bea37c27f238313e12859cc68c" name="property_proc.xml.zlib" packed="147483" size="1112956" title="Хозяйственный Процессуальный Кодекс Республики Беларусь"/>
