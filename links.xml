@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <links URL="https://github.com/aniterum/CodexesBY/raw/master/laws_zlib/">
-  <codex hash="c575779ef3809cad1a2092c92ee551a007452d4e" name="civil_proc.xml.zlib" packed="166458" size="1073401" title="Гражданский Процессуальный Кодекс Республики Беларусь"/>
-  <codex hash="5009ab123a8c3011f02818041bd5f66e278c3cc6" name="bank.xml.zlib" packed="98388" size="703287" title="Банковский Кодекс Республики Беларусь"/>
-  <codex hash="240c82d36afe80bea37c27f238313e12859cc68c" name="property_proc.xml.zlib" packed="147483" size="1112956" title="Хозяйственный Процессуальный Кодекс Республики Беларусь"/>
-  <codex hash="f52e380e4c61064ba6154670b6b0451dd442b53d" name="educational.xml.zlib" packed="166832" size="1562192" title="Кодекс Республики Беларусь Об Образовании"/>
-  <codex hash="7dd8cadc3fd0e4e44c730447787c59936921fbaa" name="criminal.xml.zlib" packed="122374" size="1025042" title="Уголовный Кодекс Республики Беларусь"/>
-  <codex hash="fe6eeb9d51db4c0ccd8e69b1da1cf469f2508480" name="taxing_special.xml.zlib" packed="420933" size="3060569" title="Налоговый Кодекс Республики Беларусь*|(Особенная Часть)"/>
-  <codex hash="5debddd3bba126bf91794de28ad6687a67d374d0" name="wood.xml.zlib" packed="37736" size="250512" title="Лесной Кодекс Республики Беларусь"/>
-  <codex hash="db69983cf82bb4de309bb74e7148671a210af3c8" name="criminal_proc.xml.zlib" packed="221729" size="1590888" title="Уголовно-Процессуальный Кодекс Республики Беларусь"/>
-  <codex hash="c30155a1a9a940bb862e15949527e3fe0aa8650a" name="housing.xml.zlib" packed="144117" size="1098023" title="Жилищный Кодекс Республики Беларусь"/>
-  <codex hash="35d874ba45358584978b281f02cc296f6372b08e" name="court_and_judge.xml.zlib" packed="54684" size="459291" title="Кодекс Республики Беларусь О Судоустройстве И Статусе Судей"/>
-  <codex hash="d2b5f2599af228ad5bcdc530a1cd1ea516584959" name="admin_proc.xml.zlib" packed="87178" size="642140" title="Процессуально-Исполнительный Кодекс Республики Беларусь Об Административных Правонарушениях"/>
-  <codex hash="eee9359b510454a667353bb18f60d21d5c03450b" name="marriage_family.xml.zlib" packed="65611" size="442580" title="Кодекс Республики Беларусь О Браке И Семье"/>
-  <codex hash="c5ce1354565004bd6839a9c46f5da127819123c8" name="air.xml.zlib" packed="38282" size="274566" title="Воздушный Кодекс Республики Беларусь"/>
-  <codex hash="17d2e2c920bebb090267537c31c4f92e8a36eae1" name="job.xml.zlib" packed="111237" size="716103" title="Трудовой Кодекс Республики Беларусь"/>
-  <codex hash="d9a4fc4deeb0640a57efe497e1970d1d8cea0b29" name="civil.xml.zlib" packed="322596" size="2097070" title="Гражданский Кодекс Республики Беларусь"/>
-  <codex hash="50f8e1a43da97fa13343ff455ef649a4a751915e" name="seafaring_trade.xml.zlib" packed="64325" size="401432" title="Кодекс Торгового Мореплавания Республики Беларусь"/>
-  <codex hash="1c486d9eb1ee77592f707bf849f96339ff1bc242" name="vater_transport.xml.zlib" packed="58422" size="378194" title="Кодекс Внутреннего Водного Транспорта Республики Беларусь"/>
-  <codex hash="a14a4ff9089fcf52850477c043bcc5d94ffa2175" name="ground.xml.zlib" packed="60181" size="459489" title="Кодекс Республики Беларусь О Земле"/>
-  <codex hash="e1cd1f1e9d8de276bd4b84685b6c60fa11bf4b85" name="voting.xml.zlib" packed="97907" size="774251" title="Избирательный Кодекс Республики Беларусь"/>
-  <codex hash="62fea01169524fbf25813fe9ab417c1b16fb6383" name="taxing_common.xml.zlib" packed="106531" size="749502" title="Налоговый Кодекс Республики Беларусь*|(Общая Часть)"/>
-  <codex hash="6f5d1ba0f28880b9bae3b03472a43c6a9eaef313" name="underground.xml.zlib" packed="57039" size="417659" title="Кодекс Республики Беларусь О Недрах"/>
-  <codex hash="5e1de59299408cd4af433d9f63320eb48fe34627" name="criminal_exec.xml.zlib" packed="89811" size="629348" title="Уголовно-Исполнительный Кодекс Республики Беларусь"/>
-  <codex hash="9a6b15d3fd2cad7d878f43f60c843f2bd6221ff6" name="budget.xml.zlib" packed="81987" size="701642" title="Бюджетный Кодекс Республики Беларусь"/>
-  <codex hash="74b075df96d61b448bf8a2748aa12ba850ef2b47" name="water.xml.zlib" packed="32204" size="218938" title="Водный Кодекс Республики Беларусь"/>
-  <codex hash="81b0e5222d7c5ed34da08ca77d0bcf6d42f2c0b9" name="admin.xml.zlib" packed="129568" size="1086542" title="Кодекс Республики Беларусь Об Административных Правонарушениях"/>
+  <codex hash="c575779ef3809cad1a2092c92ee551a007452d4e" name="civil_proc.xml.zlib" packed="166458" size="1073401" title="Гражданский Процессуальный Кодекс"/>
+  <codex hash="5009ab123a8c3011f02818041bd5f66e278c3cc6" name="bank.xml.zlib" packed="98388" size="703287" title="Банковский Кодекс"/>
+  <codex hash="240c82d36afe80bea37c27f238313e12859cc68c" name="property_proc.xml.zlib" packed="147483" size="1112956" title="Хозяйственный Процессуальный Кодекс"/>
+  <codex hash="f52e380e4c61064ba6154670b6b0451dd442b53d" name="educational.xml.zlib" packed="166832" size="1562192" title="Кодекс Об Образовании"/>
+  <codex hash="7dd8cadc3fd0e4e44c730447787c59936921fbaa" name="criminal.xml.zlib" packed="122374" size="1025042" title="Уголовный Кодекс"/>
+  <codex hash="fe6eeb9d51db4c0ccd8e69b1da1cf469f2508480" name="taxing_special.xml.zlib" packed="420933" size="3060569" title="Налоговый Кодекс (Особенная Часть)"/>
+  <codex hash="5debddd3bba126bf91794de28ad6687a67d374d0" name="wood.xml.zlib" packed="37736" size="250512" title="Лесной Кодекс"/>
+  <codex hash="db69983cf82bb4de309bb74e7148671a210af3c8" name="criminal_proc.xml.zlib" packed="221729" size="1590888" title="Уголовно-Процессуальный Кодекс"/>
+  <codex hash="c30155a1a9a940bb862e15949527e3fe0aa8650a" name="housing.xml.zlib" packed="144117" size="1098023" title="Жилищный Кодекс"/>
+  <codex hash="35d874ba45358584978b281f02cc296f6372b08e" name="court_and_judge.xml.zlib" packed="54684" size="459291" title="Кодекс О Судоустройстве И Статусе Судей"/>
+  <codex hash="d2b5f2599af228ad5bcdc530a1cd1ea516584959" name="admin_proc.xml.zlib" packed="87178" size="642140" title="Процессуально-Исполнительный Кодекс Об Административных Правонарушениях"/>
+  <codex hash="eee9359b510454a667353bb18f60d21d5c03450b" name="marriage_family.xml.zlib" packed="65611" size="442580" title="Кодекс О Браке И Семье"/>
+  <codex hash="c5ce1354565004bd6839a9c46f5da127819123c8" name="air.xml.zlib" packed="38282" size="274566" title="Воздушный Кодекс"/>
+  <codex hash="17d2e2c920bebb090267537c31c4f92e8a36eae1" name="job.xml.zlib" packed="111237" size="716103" title="Трудовой Кодекс"/>
+  <codex hash="d9a4fc4deeb0640a57efe497e1970d1d8cea0b29" name="civil.xml.zlib" packed="322596" size="2097070" title="Гражданский Кодекс"/>
+  <codex hash="50f8e1a43da97fa13343ff455ef649a4a751915e" name="seafaring_trade.xml.zlib" packed="64325" size="401432" title="Кодекс Торгового Мореплавания"/>
+  <codex hash="1c486d9eb1ee77592f707bf849f96339ff1bc242" name="vater_transport.xml.zlib" packed="58422" size="378194" title="Кодекс Внутреннего Водного Транспорта"/>
+  <codex hash="a14a4ff9089fcf52850477c043bcc5d94ffa2175" name="ground.xml.zlib" packed="60181" size="459489" title="Кодекс О Земле"/>
+  <codex hash="e1cd1f1e9d8de276bd4b84685b6c60fa11bf4b85" name="voting.xml.zlib" packed="97907" size="774251" title="Избирательный Кодекс"/>
+  <codex hash="62fea01169524fbf25813fe9ab417c1b16fb6383" name="taxing_common.xml.zlib" packed="106531" size="749502" title="Налоговый Кодекс (Общая Часть)"/>
+  <codex hash="6f5d1ba0f28880b9bae3b03472a43c6a9eaef313" name="underground.xml.zlib" packed="57039" size="417659" title="Кодекс О Недрах"/>
+  <codex hash="5e1de59299408cd4af433d9f63320eb48fe34627" name="criminal_exec.xml.zlib" packed="89811" size="629348" title="Уголовно-Исполнительный Кодекс"/>
+  <codex hash="9a6b15d3fd2cad7d878f43f60c843f2bd6221ff6" name="budget.xml.zlib" packed="81987" size="701642" title="Бюджетный Кодекс"/>
+  <codex hash="74b075df96d61b448bf8a2748aa12ba850ef2b47" name="water.xml.zlib" packed="32204" size="218938" title="Водный Кодекс"/>
+  <codex hash="81b0e5222d7c5ed34da08ca77d0bcf6d42f2c0b9" name="admin.xml.zlib" packed="129568" size="1086542" title="Кодекс Об Административных Правонарушениях"/>
 </links>
