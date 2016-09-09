@@ -176,7 +176,9 @@ elif action == "make_list":
             file_stat = os.stat(fname) #File size
             data = open(fname, 'rb').read()
             zipped = zlib.compress(data)
-            open('laws_zlib/' + file + ".zlib", 'wb').write(zipped)
+            zlibFile = open('laws_zlib/' + file + ".zlib", 'wb')
+            zlibFile.write(file_stat.st_size.to_bytes(4, 'little'))
+            zlibFile.write(zipped)
             
             file_hash = hashlib.sha1(data).hexdigest() #SHA1-sum
 
