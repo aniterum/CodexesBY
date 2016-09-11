@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 from xml.etree import ElementTree as ET
+import re
 
 def ParseAshx(ifile, ofile):
     
@@ -33,6 +34,8 @@ def ParseAshx(ifile, ofile):
     curr_article = None
     curr_chapter = None
 
+    article_title = re.compile("^Статья \d+\.\s*(\d+\.\s*)*")
+
     ch_id = 0
 
     for i in sec.iter():
@@ -45,7 +48,7 @@ def ParseAshx(ifile, ofile):
                         if _i.get('class') in ["name", "promulgator"]:
                             _title += _i.text
                             
-                addChild(info, 'info', {'class':'title', 'text':__title})
+                addChild(info, 'info', {'class':'title', 'text':_title})
             else:
                 addChild(info, 'info', {'class':'title', 'text':i.text})
         elif tag == "datepr": #Дата принятия
@@ -68,10 +71,13 @@ def ParseAshx(ifile, ofile):
                 curr_razdel = text
             curr_chapter = addChild(curr_razdel, 'chapter', {'id':i.get('id'), 'text':i.text})
         elif tag in ["article", "articleintext"]: #Статья
+            a_text = i.text
+            if (article_title.match(i.text) != None):
+                _, _, a_text = article_title.split(i.text)                
             if curr_chapter != None:
-                curr_article = addChild(curr_chapter, 'article', {'id':i.get('id'), 'text':i.text})
+                curr_article = addChild(curr_chapter, 'article', {'id':i.get('id'), 'text':a_text})
             elif curr_razdel != None:
-                curr_article = addChild(curr_razdel, 'article', {'id':i.get('id'), 'text':i.text})
+                curr_article = addChild(curr_razdel, 'article', {'id':i.get('id'), 'text':a_text})
            
         elif tag in ["newncpi", "contenttext"]: 
             if curr_article != None:
@@ -193,7 +199,10 @@ elif action == "make_list":
             _tmp["packed"] = str(len(zipped))
             _tmp["name"]  = file + ".zlib"
             _tmp["hash"]  = file_hash
-            _tmp["title"] = file_title.title()
+            _tmp["title"] = file_title.title().replace("Республики Беларусь","")\
+                                              .replace("  ", " ")\
+                                              .replace("*|", "")\
+                                              .strip()
            
             files_attrib.append(_tmp)
 
