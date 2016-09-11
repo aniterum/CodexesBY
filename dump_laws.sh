@@ -64,3 +64,5 @@ done
 
 ./parse.py --make-links
 
+./test_zlib.py
+

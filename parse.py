@@ -145,7 +145,9 @@ def ParseAshx(ifile, ofile):
 
 import sys
 import os
+from os.path import isfile, exists, realpath, splitext
 import hashlib
+import time
 
 
 action = None
@@ -158,13 +160,13 @@ if len(sys.argv) > 1:
     if sys.argv[1] == "--all":
         action = "all"
     elif sys.argv[1] == "--make-links":
-        action = "make_list"
+        action = "make_links"
     else:
         infile = sys.argv[1]
         outfile = sys.argv[2]
 
 
-from os.path import isfile, exists, realpath
+
 
 if action == "all":
     for root, dirs, files in os.walk(source_dir):
@@ -172,7 +174,7 @@ if action == "all":
             print(file)
             ParseAshx(source_dir + "/" + file, parsed_dir + "/" + file)
             
-elif action == "make_list":
+elif action == "make_links":
     import zlib
     files_attrib = []
     for root, dirs, files in os.walk(parsed_dir):
@@ -183,8 +185,26 @@ elif action == "make_list":
             data = open(fname, 'rb').read()
             zipped = zlib.compress(data)
             zlibFile = open('laws_zlib/' + file + ".zlib", 'wb')
+
+            __fileName, ext = splitext(file)
+
+            zlibFile.write(b"\x00" * 4) #Резервируем для ссылки на блок упакованного файла, перед ним 4 байта длина оригинальных данных
+            bTime = int(time.time()).to_bytes(8, 'little')
+            zlibFile.write(bTime) #Записываем время создания
+
+            icon_name = "codex_icons/"+__fileName+".png"
+            if exists(icon_name):
+                picture = open(icon_name, 'rb').read()
+                zlibFile.write(len(picture).to_bytes(4, 'little'))
+                zlibFile.write(picture)
+            else:
+                zlibFile.write(b"\x00" * 4) #Если иконки нет, 4-байтный ноль
+
+            offset = zlibFile.tell()
             zlibFile.write(file_stat.st_size.to_bytes(4, 'little'))
             zlibFile.write(zipped)
+            zlibFile.seek(0)
+            zlibFile.write(offset.to_bytes(4, 'little'))
             
             file_hash = hashlib.sha1(data).hexdigest() #SHA1-sum
 

@@ -1,2 +1,6 @@
 db/
 __pycache__/*
+*.txt
+laws_ashx/*
+icons/*
+codex_icons/*
