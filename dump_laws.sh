@@ -52,7 +52,7 @@ for i in $DATA; do
   xmllint --xpath "string(//Doc/Text)" <<< cat /tmp/law_tmp > /tmp/law_tmp1
   xmllint -format -recover -encode utf-8 /tmp/law_tmp1 > laws_ashx/${NAME}.xml
   #Чистим от <br/> <sup> </sup> будут мешать XML парсингу
-  sed -i -e 's/<br\/>/|/g;s/<sup>/^/g;s/<\/sup>//g; s/<b>//g; s/<\/b>//g
+  sed -i -e 's/<br\/>/|/g;s/<sup>/\//g;s/<\/sup>//g; s/<b>//g; s/<\/b>//g
             /.*<span class\=\"onesymbol\"/s/<\/span>//g; s/<span class\=\"onesymbol\">//g
             /.*<span class\=\"articlec\"/s/<\/span>//g;  s/<span class\=\"articlec\" style\=\"\">//g
             /.*<span class\=\"rednoun\"/s/<\/span>//g;   s/<span class\=\"rednoun\" style\=\"\">//g

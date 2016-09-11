@@ -34,7 +34,7 @@ def ParseAshx(ifile, ofile):
     curr_article = None
     curr_chapter = None
 
-    article_title = re.compile("^Статья \d+[\.|\^]\s*(\d+\.\s*)*")
+    article_title = re.compile("^Статья[ |"+ chr(0xa0) +"]\d+[\.|/]\s*(\d+\.\s*)*") #После Статья идут пробел и символ \xa0
 
     ch_id = 0
 
@@ -157,7 +157,7 @@ parsed_dir = 'laws_xml'
 if len(sys.argv) > 1:
     if sys.argv[1] == "--all":
         action = "all"
-    elif sys.argv[1] == "--make-list":
+    elif sys.argv[1] == "--make-links":
         action = "make_list"
     else:
         infile = sys.argv[1]
