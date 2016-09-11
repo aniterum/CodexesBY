@@ -34,7 +34,7 @@ def ParseAshx(ifile, ofile):
     curr_article = None
     curr_chapter = None
 
-    article_title = re.compile("^Статья \d+\.\s*(\d+\.\s*)*")
+    article_title = re.compile("^Статья \d+[\.|\^]\s*(\d+\.\s*)*")
 
     ch_id = 0
 
