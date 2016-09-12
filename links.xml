@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <links URL="https://github.com/aniterum/CodexesBY/raw/master/laws_zlib/">
-  <codex date="1473690272" name="civil_proc.xml.zlib" packed="163767" size="1061980" title="Гражданский Процессуальный Кодекс"/>
-  <codex date="1473690272" name="bank.xml.zlib" packed="97161" size="698016" title="Банковский Кодекс"/>
-  <codex date="1473690272" name="property_proc.xml.zlib" packed="145639" size="1105263" title="Хозяйственный Процессуальный Кодекс"/>
-  <codex date="1473690272" name="educational.xml.zlib" packed="165596" size="1556970" title="Кодекс Об Образовании"/>
-  <codex date="1473690272" name="criminal.xml.zlib" packed="120019" size="1015145" title="Уголовный Кодекс"/>
-  <codex date="1473690273" name="taxing_special.xml.zlib" packed="419695" size="3055944" title="Налоговый Кодекс (Особенная Часть)"/>
-  <codex date="1473690273" name="wood.xml.zlib" packed="37185" size="248466" title="Лесной Кодекс"/>
-  <codex date="1473690273" name="criminal_proc.xml.zlib" packed="219422" size="1580200" title="Уголовно-Процессуальный Кодекс"/>
-  <codex date="1473690273" name="housing.xml.zlib" packed="143221" size="1094081" title="Жилищный Кодекс"/>
-  <codex date="1473690273" name="court_and_judge.xml.zlib" packed="53901" size="455925" title="Кодекс О Судоустройстве И Статусе Судей"/>
-  <codex date="1473690273" name="admin_proc.xml.zlib" packed="86304" size="637835" title="Процессуально-Исполнительный Кодекс Об Административных Правонарушениях"/>
-  <codex date="1473690273" name="marriage_family.xml.zlib" packed="64348" size="437629" title="Кодекс О Браке И Семье"/>
-  <codex date="1473690273" name="air.xml.zlib" packed="37723" size="272257" title="Воздушный Кодекс"/>
-  <codex date="1473690273" name="job.xml.zlib" packed="108961" size="706682" title="Трудовой Кодекс"/>
-  <codex date="1473690273" name="civil.xml.zlib" packed="317836" size="2074590" title="Гражданский Кодекс"/>
-  <codex date="1473690273" name="seafaring_trade.xml.zlib" packed="63165" size="396194" title="Кодекс Торгового Мореплавания"/>
-  <codex date="1473690273" name="vater_transport.xml.zlib" packed="57659" size="374963" title="Кодекс Внутреннего Водного Транспорта"/>
-  <codex date="1473690273" name="ground.xml.zlib" packed="59786" size="457721" title="Кодекс О Земле"/>
-  <codex date="1473690273" name="voting.xml.zlib" packed="97078" size="771036" title="Избирательный Кодекс"/>
-  <codex date="1473690274" name="taxing_common.xml.zlib" packed="106008" size="747704" title="Налоговый Кодекс (Общая Часть)"/>
-  <codex date="1473690274" name="underground.xml.zlib" packed="56582" size="416121" title="Кодекс О Недрах"/>
-  <codex date="1473690274" name="criminal_exec.xml.zlib" packed="88957" size="625356" title="Уголовно-Исполнительный Кодекс"/>
-  <codex date="1473690274" name="budget.xml.zlib" packed="81312" size="698837" title="Бюджетный Кодекс"/>
-  <codex date="1473690274" name="water.xml.zlib" packed="31747" size="217064" title="Водный Кодекс"/>
-  <codex date="1473690274" name="admin.xml.zlib" packed="127203" size="1075618" title="Кодекс Об Административных Правонарушениях"/>
+  <codex date="1473709613" name="civil_proc.xml.zlib" packed="163767" size="1061980" title="Гражданский Процессуальный Кодекс"/>
+  <codex date="1473709613" name="bank.xml.zlib" packed="97161" size="698016" title="Банковский Кодекс"/>
+  <codex date="1473709613" name="property_proc.xml.zlib" packed="145639" size="1105263" title="Хозяйственный Процессуальный Кодекс"/>
+  <codex date="1473709613" name="educational.xml.zlib" packed="165596" size="1556970" title="Кодекс Об Образовании"/>
+  <codex date="1473709613" name="criminal.xml.zlib" packed="120019" size="1015145" title="Уголовный Кодекс"/>
+  <codex date="1473709614" name="taxing_special.xml.zlib" packed="419695" size="3055944" title="Налоговый Кодекс (Особенная Часть)"/>
+  <codex date="1473709614" name="wood.xml.zlib" packed="37185" size="248466" title="Лесной Кодекс"/>
+  <codex date="1473709614" name="criminal_proc.xml.zlib" packed="219422" size="1580200" title="Уголовно-Процессуальный Кодекс"/>
+  <codex date="1473709614" name="housing.xml.zlib" packed="143221" size="1094081" title="Жилищный Кодекс"/>
+  <codex date="1473709614" name="court_and_judge.xml.zlib" packed="53901" size="455925" title="Кодекс О Судоустройстве И Статусе Судей"/>
+  <codex date="1473709614" name="admin_proc.xml.zlib" packed="86304" size="637835" title="Процессуально-Исполнительный Кодекс Об Административных Правонарушениях"/>
+  <codex date="1473709614" name="marriage_family.xml.zlib" packed="64348" size="437629" title="Кодекс О Браке И Семье"/>
+  <codex date="1473709614" name="air.xml.zlib" packed="37723" size="272257" title="Воздушный Кодекс"/>
+  <codex date="1473709614" name="job.xml.zlib" packed="108961" size="706682" title="Трудовой Кодекс"/>
+  <codex date="1473709614" name="civil.xml.zlib" packed="317836" size="2074590" title="Гражданский Кодекс"/>
+  <codex date="1473709614" name="seafaring_trade.xml.zlib" packed="63165" size="396194" title="Кодекс Торгового Мореплавания"/>
+  <codex date="1473709614" name="vater_transport.xml.zlib" packed="57659" size="374963" title="Кодекс Внутреннего Водного Транспорта"/>
+  <codex date="1473709614" name="ground.xml.zlib" packed="59786" size="457721" title="Кодекс О Земле"/>
+  <codex date="1473709615" name="voting.xml.zlib" packed="97078" size="771036" title="Избирательный Кодекс"/>
+  <codex date="1473709615" name="taxing_common.xml.zlib" packed="106008" size="747704" title="Налоговый Кодекс (Общая Часть)"/>
+  <codex date="1473709615" name="underground.xml.zlib" packed="56582" size="416121" title="Кодекс О Недрах"/>
+  <codex date="1473709615" name="criminal_exec.xml.zlib" packed="88957" size="625356" title="Уголовно-Исполнительный Кодекс"/>
+  <codex date="1473709615" name="budget.xml.zlib" packed="81312" size="698837" title="Бюджетный Кодекс"/>
+  <codex date="1473709615" name="water.xml.zlib" packed="31747" size="217064" title="Водный Кодекс"/>
+  <codex date="1473709615" name="admin.xml.zlib" packed="127203" size="1075618" title="Кодекс Об Административных Правонарушениях"/>
 </links>
