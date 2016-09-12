@@ -22,8 +22,13 @@ def testPicture(picture):
 def testFile(filePath):
     print(filePath)
     file = open(filePath, "rb")
-    offset = bytesToInt(file.read(4))
+    version = bytesToInt(file.read(2))
+    print("    Version", version)
+    titleSize = bytesToInt(file.read(2))
+    title = file.read(titleSize).decode()
+    print("    Title", title)
     date = bytesToInt(file.read(8))
+    offset = bytesToInt(file.read(4))
     picSize = bytesToInt(file.read(4))
     if picSize != 0:
         picture = file.read(picSize)
