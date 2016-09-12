@@ -216,18 +216,17 @@ elif action == "make_links":
 
             VERSION = 1
             zlibFile.write(VERSION.to_bytes(2, "little")) #Записываем первые 2 байта - версия архива
-            bTitle = _tmp["title"].encode()
+                        
+            OFFSET_POS = zlibFile.tell()
+            zlibFile.write(b"\x00" * 4) #Резервируем для ссылки на блок упакованного файла, перед ним 4 байта длина оригинальных данных
             
+            bTitle = _tmp["title"].encode()
             bTitleSize = len(bTitle).to_bytes(2, "little")
             zlibFile.write(bTitleSize) #Пишем длину имени кодекса
             zlibFile.write(bTitle) #Пишем имя кодекса
 
             bTime = creationTime.to_bytes(8, 'little')
             zlibFile.write(bTime) #Записываем время создания
-            
-            OFFSET_POS = zlibFile.tell()
-            zlibFile.write(b"\x00" * 4) #Резервируем для ссылки на блок упакованного файла, перед ним 4 байта длина оригинальных данных
-
             
             __fileName, ext = splitext(file)
             icon_name = "codex_icons/"+__fileName+".png"
