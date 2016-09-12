@@ -29,7 +29,7 @@ def testFile(filePath):
     title = file.read(titleSize).decode()
     print("    Title", title)
     date = bytesToInt(file.read(8))
-
+    print("    Date", date)
     picSize = bytesToInt(file.read(4))
     if picSize != 0:
         picture = file.read(picSize)
