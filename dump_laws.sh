@@ -62,6 +62,8 @@ for i in $DATA; do
 
 done
 
+git diff --name-only
+
 #./parse.py --make-links
 
 #./test_zlib.py

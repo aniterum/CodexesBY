@@ -128,7 +128,7 @@ def ParseAshx(ifile, ofile):
                            "paragraph", "podrazdel", "numheader", "nonumheader", #образуют слишком большую вложенность
                            "table10", #Таблицы в особой части налогового кодекса
                            ]:
-                print(tag)
+                
 
 
     tree = ET.ElementTree(doc)
