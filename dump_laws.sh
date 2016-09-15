@@ -62,7 +62,7 @@ for i in $DATA; do
 
 done
 
-./parse.py --make-links
+#./parse.py --make-links
 
-./test_zlib.py
+#./test_zlib.py
 
