@@ -62,6 +62,8 @@ for i in $DATA; do
 
 done
 
+echo "-----------------------------"
+
 git diff --name-only
 
 #./parse.py --make-links
