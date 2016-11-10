@@ -156,6 +156,7 @@ infile = ""
 ofile = ""
 source_dir = 'laws_ashx'
 parsed_dir = 'laws_xml'
+zlib_dir = 'laws_zlib/'
 
 if len(sys.argv) > 1:
     if sys.argv[1] == "--all":
@@ -214,7 +215,7 @@ elif action == "make_zlib":
     
 
 
-    zlibFile = open('laws_zlib/' + file + ".zlib", 'wb')
+    zlibFile = open(zlib_dir + file + ".zlib", 'wb')
 
 
     VERSION = 1
@@ -248,39 +249,18 @@ elif action == "make_zlib":
             
 
 elif action == "make_links":
-            
+    import test_zlib
     links = ET.Element('links')
     links.set("URL", "https://github.com/aniterum/CodexesBY/raw/master/laws_zlib/")
 
     files_attrib = []
     
 
-    for root, dirs, files in os.walk(parsed_dir):
+    for root, dirs, files in os.walk(zlib_dir):
         for file in files:
-            _tmp = {}
+            _tmp = test_zlib.testFile(root + "/" + file, verbose=False)
+            _tmp["name"] = file
             files_attrib.append(_tmp)
-            fname = parsed_dir+"/"+file
-            file_stat = os.stat(fname) #File size
-
-            zipped = open('laws_zlib/' + file + ".zlib", 'rb').read()
-
-            _root = ET.parse(fname).getroot()
-            for i in _root.iter():
-                if i.tag == "info":
-                    if i.get('class') == 'title':
-                        file_title = i.get('text').strip()
-
-            
-            _tmp["size"]  = str(file_stat.st_size)
-            _tmp["packed"] = str(len(zipped))
-            _tmp["name"]  = file + ".zlib"
-            creationTime = int(file_stat.st_mtime)
-            _tmp["date"]  = str(creationTime)
-            _tmp["title"] = file_title.title().replace("Республики Беларусь","")\
-                                              .replace("  ", " ")\
-                                              .replace("*|", "")\
-                                              .strip()
-
             
 
     for i in files_attrib:

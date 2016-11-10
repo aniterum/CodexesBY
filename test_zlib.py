@@ -19,7 +19,7 @@ def testPicture(picture):
     
     
 
-def testFile(filePath):
+def testFile(filePath, verbose=True):
     print(filePath)
     file = open(filePath, "rb")
     version = bytesToInt(file.read(2))
@@ -49,7 +49,13 @@ def testFile(filePath):
     else:
         print("    Zlib Test OK!")
 
+    out = {}
+    out["date"] = str(date)
+    out["title"] = title
+    out["size"] = str(origSize)
+    out["packed"] = str(len(zlibbed))
 
+    return out
 
   
 if __name__ == "__main__":
