@@ -40,7 +40,7 @@ def ParseAshx(ifile, ofile):
 
     for i in sec.iter():
         tag = i.get('class')
-        if tag == "titlek": #Название
+        if tag == "titlek" or tag == "title": #Название
             if i.text.strip() == "": #Особый случай для банковского кодекса
                 _title = ""
                 for _i in i.iter():
@@ -162,6 +162,10 @@ if len(sys.argv) > 1:
         action = "all"
     elif sys.argv[1] == "--make-links":
         action = "make_links"
+    elif sys.argv[1] == "--make-zlib":
+        action = "make_zlib"
+        file = sys.argv[2]
+        print(file)
     else:
         infile = sys.argv[1]
         outfile = sys.argv[2]
@@ -175,19 +179,90 @@ if action == "all":
             print(file)
             ParseAshx(source_dir + "/" + file, parsed_dir + "/" + file)
             
-elif action == "make_links":
+elif action == "make_zlib":
     import zlib
     files_attrib = []
+    _tmp = {}
+    fname = parsed_dir+"/"+file
+    file_stat = os.stat(fname) #File size
+    data = open(fname, 'rb').read()
+    zipped = zlib.compress(data)
+
+    files_attrib.append(_tmp)
+    
+
+    _root = ET.parse(fname).getroot()
+    for i in _root.iter():
+        if i.tag == "info":
+            if i.get('class') == 'title':
+                file_title = i.get('text').strip()
+
+    
+    _tmp["size"]  = str(file_stat.st_size)
+    _tmp["packed"] = str(len(zipped))
+    _tmp["name"]  = file + ".zlib"
+    creationTime = int(time.time())
+    _tmp["date"]  = str(creationTime)
+    _tmp["title"] = file_title.title().replace("Республики Беларусь","")\
+                                      .replace("  ", " ")\
+                                      .replace("*|", "")\
+                                      .strip()
+
+
+
+
+    
+
+
+    zlibFile = open('laws_zlib/' + file + ".zlib", 'wb')
+
+
+    VERSION = 1
+    zlibFile.write(VERSION.to_bytes(2, "little")) #Записываем первые 2 байта - версия архива
+                
+    OFFSET_POS = zlibFile.tell()
+    zlibFile.write(b"\x00" * 4) #Резервируем для ссылки на блок упакованного файла, перед ним 4 байта длина оригинальных данных
+    
+    bTitle = _tmp["title"].encode()
+    bTitleSize = len(bTitle).to_bytes(2, "little")
+    zlibFile.write(bTitleSize) #Пишем длину имени кодекса
+    zlibFile.write(bTitle) #Пишем имя кодекса
+
+    bTime = creationTime.to_bytes(8, 'little')
+    zlibFile.write(bTime) #Записываем время создания
+    
+    __fileName, ext = splitext(file)
+    icon_name = "codex_icons/"+__fileName+".png"
+    if exists(icon_name):
+        picture = open(icon_name, 'rb').read()
+        zlibFile.write(len(picture).to_bytes(4, 'little'))
+        zlibFile.write(picture)
+    else:
+        zlibFile.write(b"\x00" * 4) #Если иконки нет, 4-байтный ноль
+
+    offset = zlibFile.tell()
+    zlibFile.write(file_stat.st_size.to_bytes(4, 'little'))
+    zlibFile.write(zipped)
+    zlibFile.seek(OFFSET_POS)
+    zlibFile.write(offset.to_bytes(4, 'little'))
+            
+
+elif action == "make_links":
+            
+    links = ET.Element('links')
+    links.set("URL", "https://github.com/aniterum/CodexesBY/raw/master/laws_zlib/")
+
+    files_attrib = []
+    
+
     for root, dirs, files in os.walk(parsed_dir):
         for file in files:
             _tmp = {}
+            files_attrib.append(_tmp)
             fname = parsed_dir+"/"+file
             file_stat = os.stat(fname) #File size
-            data = open(fname, 'rb').read()
-            zipped = zlib.compress(data)
-  
-            files_attrib.append(_tmp)
-            
+
+            zipped = open('laws_zlib/' + file + ".zlib", 'rb').read()
 
             _root = ET.parse(fname).getroot()
             for i in _root.iter():
@@ -199,56 +274,14 @@ elif action == "make_links":
             _tmp["size"]  = str(file_stat.st_size)
             _tmp["packed"] = str(len(zipped))
             _tmp["name"]  = file + ".zlib"
-            creationTime = int(time.time())
+            creationTime = int(file_stat.st_mtime)
             _tmp["date"]  = str(creationTime)
             _tmp["title"] = file_title.title().replace("Республики Беларусь","")\
                                               .replace("  ", " ")\
                                               .replace("*|", "")\
                                               .strip()
 
-
-
-
             
-
-
-            zlibFile = open('laws_zlib/' + file + ".zlib", 'wb')
-
-
-            VERSION = 1
-            zlibFile.write(VERSION.to_bytes(2, "little")) #Записываем первые 2 байта - версия архива
-                        
-            OFFSET_POS = zlibFile.tell()
-            zlibFile.write(b"\x00" * 4) #Резервируем для ссылки на блок упакованного файла, перед ним 4 байта длина оригинальных данных
-            
-            bTitle = _tmp["title"].encode()
-            bTitleSize = len(bTitle).to_bytes(2, "little")
-            zlibFile.write(bTitleSize) #Пишем длину имени кодекса
-            zlibFile.write(bTitle) #Пишем имя кодекса
-
-            bTime = creationTime.to_bytes(8, 'little')
-            zlibFile.write(bTime) #Записываем время создания
-            
-            __fileName, ext = splitext(file)
-            icon_name = "codex_icons/"+__fileName+".png"
-            if exists(icon_name):
-                picture = open(icon_name, 'rb').read()
-                zlibFile.write(len(picture).to_bytes(4, 'little'))
-                zlibFile.write(picture)
-            else:
-                zlibFile.write(b"\x00" * 4) #Если иконки нет, 4-байтный ноль
-
-            offset = zlibFile.tell()
-            zlibFile.write(file_stat.st_size.to_bytes(4, 'little'))
-            zlibFile.write(zipped)
-            zlibFile.seek(OFFSET_POS)
-            zlibFile.write(offset.to_bytes(4, 'little'))
-            
-
-
-            
-    links = ET.Element('links')
-    links.set("URL", "https://github.com/aniterum/CodexesBY/raw/master/laws_zlib/")
 
     for i in files_attrib:
         codex_info = ET.Element('codex')
@@ -264,6 +297,7 @@ elif action == "make_links":
         os.system(command % (tmpFile, 'links.xml'))
     except:
         ET.dump(links)
+        
 
 else:
     if exists(infile):
