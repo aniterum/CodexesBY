@@ -3,6 +3,7 @@
   <codex date="1473712861" name="housing.xml.zlib" packed="143221" size="1094081" title="Жилищный Кодекс"/>
   <codex date="1478737652" name="criminal_exec.xml.zlib" packed="88957" size="625357" title="Уголовно-Исполнительный Кодекс"/>
   <codex date="1473712860" name="criminal.xml.zlib" packed="120019" size="1015145" title="Уголовный Кодекс"/>
+  <codex date="1480349045" name="constitution.xml.zlib" packed="27466" size="151960" title="Конституция 1994 Года"/>
   <codex date="1473712861" name="criminal_proc.xml.zlib" packed="219422" size="1580200" title="Уголовно-Процессуальный Кодекс"/>
   <codex date="1473712861" name="job.xml.zlib" packed="108961" size="706682" title="Трудовой Кодекс"/>
   <codex date="1473712860" name="property_proc.xml.zlib" packed="145639" size="1105263" title="Хозяйственный Процессуальный Кодекс"/>
